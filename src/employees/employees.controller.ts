@@ -13,8 +13,10 @@ import { mongo } from 'mongoose';
 import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
 import { EmployeesService } from './employees.service';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('employees')
+@ApiTags("Employees")
 export class EmployeesController {
   constructor(private readonly employeesService: EmployeesService) {}
 

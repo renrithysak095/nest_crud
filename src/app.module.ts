@@ -12,14 +12,14 @@ import { UsersService } from './users/users.service';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb://Admin:deadman007@localhost:27017/ts?authMechanism=DEFAULT',
+      'mongodb+srv://renrithysak095:mplwd1PROw7uXqfs@nestcrud.dx5ijrb.mongodb.net/?retryWrites=true&w=majority&appName=NestCrud',
     ),
     MongooseModule.forFeature([
       { name: 'User', schema: UserSchema },
       { name: 'Employee', schema: EmployeeSchema },
     ]),
   ],
-  controllers: [AppController, UsersController, EmployeesController],
-  providers: [AppService, UsersService, EmployeesService],
+  controllers: [UsersController, EmployeesController],
+  providers: [UsersService, EmployeesService],
 })
 export class AppModule {}
